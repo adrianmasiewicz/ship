@@ -1,7 +1,7 @@
 #include "ship.hpp"
 #include <iostream>
 
-Ship::Ship(const string id, const string name, int speed, int maxCrew, int capacity)
+Ship::Ship(string id, string name, int speed, int maxCrew, int capacity)
     : id_(id),
       name_(name),
       speed_(speed),
@@ -11,7 +11,7 @@ Ship::Ship(const string id, const string name, int speed, int maxCrew, int capac
 Ship::Ship()
     : Ship("no_ID", "no name", -1, -1, -1) {}
 
-Ship::Ship(const string id, int speed, int maxCrew)
+Ship::Ship(string id, int speed, int maxCrew)
     : id_(id), name_("no name"), speed_(speed), maxCrew_(maxCrew), capacity_(-1) {}
 
 void Ship::setName(string name) {
@@ -32,4 +32,11 @@ int Ship::getMaxCrew() const {
 }
 int Ship::getCapacity() const {
     return capacity_;
+}
+
+void Ship::showShip(){
+    cout << name_ << " ID: " << id_ << "\n";
+    cout << name_ << " Speed: " << speed_ << "km/h\n";
+    cout << name_ << " max crew: " << maxCrew_ << " People\n";
+    cout << name_ << " capacity: " << capacity_ << " kg\n";
 }

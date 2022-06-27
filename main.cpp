@@ -1,28 +1,79 @@
 #include <iostream>
+#include <vector>
 #include "ship.hpp"
 
 using namespace std;
 
-
-void showShip(Ship* s);
+void startGame();
+void mainChoice();
+void showAllShip(vector<Ship> vecShip);
+Ship newShip();
 
 int main() {
-    Ship new34("new34", "Stephan", 56, 20, 2000);
-    Ship new43;
-    Ship new77("new77", 80, 6);
+    int choice;
+    vector<Ship> vecShip;
+    vecShip.push_back(Ship("WR02", "First", 90, 99, 92));
 
-    showShip(&new34);
-    cout << endl;
-    showShip(&new43);
-    cout << endl;
-    showShip(&new77);
+    startGame();
+    mainChoice();
+    while (cin >> choice) {
+        
+        
+
+        if (choice == 1) {
+            vector<Ship> * ptr = &vecShip;
+            Ship s = newShip();
+            ptr->push_back(s);
+        }
+        if (choice == 2) {
+            showAllShip(vecShip);
+        }
+        cout << "***************************"<<endl;
+        
+        
+        
+        mainChoice();
+    }
 }
 
-void showShip(Ship* s) {
-    static int number = 1;
-    cout << "Ship number: " << number++ << "\n";
-    cout << s->getId() << " Name: " << s->getName() << "\n";
-    cout << s->getId() << " Speed: " << s->getSpeed() << "km/h\n";
-    cout << s->getId() << " max crew: " << s->getMaxCrew() << " People\n";
-    cout << s->getId() << " capacity: " << s->getCapacity() << " kg\n";
+void startGame() {
+    system("clear");
+    cout << "Welcome to the game Ship! " << endl;
+    cout << "Enter a number to play or a character 'q' to exit: ";
+}
+
+Ship newShip() {
+    string id;
+    string name;
+    int speed;
+    int maxCrew;
+    int capacity;
+
+    cout << "Give me ID: ";
+    cin >> id;
+    cout << "Give me Name: ";
+    cin >> name;
+    cout << "Give me max speed: ";
+    cin >> speed;
+    cout << "Give me max crew: ";
+    cin >> maxCrew;
+    cout << "Give me a capacity your ship: ";
+    cin >> capacity;
+
+    Ship newShip(id, name, speed, maxCrew, capacity);
+    return newShip;
+}
+
+void mainChoice() {
+    cout << "\n====================================\n";
+    cout << "Enter a number 1 to create new ship\n";
+    cout << "Enter a number 2 to show alle ship\n";
+}
+
+void showAllShip(vector<Ship> vecShip) {
+    
+    for(int i = 0; i < vecShip.size();i++){
+        vecShip[i].showShip();
+    }
+    
 }

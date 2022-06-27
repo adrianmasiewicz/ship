@@ -4,6 +4,7 @@
 using namespace std;
 
 class Ship {
+    
     string id_;
     string name_;
     int speed_;
@@ -12,8 +13,8 @@ class Ship {
 
 public:
     Ship();
-    Ship(const string id, const string name, int speed, int maxCrew, int capacity);
-    Ship(const string id, int speed, int maxCrew);
+    Ship(string id, string name, int speed, int maxCrew, int capacity);
+    Ship(string id, int speed, int maxCrew);
 
     void setName(string);
 
@@ -23,5 +24,5 @@ public:
     int getMaxCrew() const;
     int getCapacity() const;
 
-
+    void showShip();
 };

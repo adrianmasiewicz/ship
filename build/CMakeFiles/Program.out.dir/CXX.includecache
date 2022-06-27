@@ -9,14 +9,10 @@
 /home/adrian/Pulpit/p030522/OOP/ship/main.cpp
 iostream
 -
-ship.hpp
-/home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
-
-/home/adrian/Pulpit/p030522/OOP/ship/ship.cpp
-ship.hpp
-/home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
-iostream
+vector
 -
+ship.hpp
+/home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
 
 /home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
 string
