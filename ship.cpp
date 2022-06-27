@@ -23,3 +23,9 @@ void Ship::setName(string name)
 {
     name_ = name; 
 }
+
+string Ship::getId() const { return id_; }
+string Ship::getName() const { return name_; }
+int Ship::getSpeed() const { return speed_; }
+int Ship::getMaxCrew() const { return maxCrew_; }
+int Ship::getCapacity() const { return capacity_; }

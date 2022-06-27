@@ -19,9 +19,9 @@ public:
 
     void setName(string);
 
-    string getId() const { return id_; }
-    string getName() const { return name_; }
-    int getSpeed() const { return speed_; }
-    int getMaxCrew() const { return maxCrew_; }
-    int getCapacity() const { return capacity_; }
+    string getId() const;
+    string getName() const;
+    int getSpeed() const;
+    int getMaxCrew() const;
+    int getCapacity() const;
 };
