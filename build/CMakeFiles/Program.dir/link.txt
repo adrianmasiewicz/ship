@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Program.dir/main.cpp.o CMakeFiles/Program.dir/ship.cpp.o  -o Program 

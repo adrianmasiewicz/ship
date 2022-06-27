@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/execName.dir/main.cpp.o CMakeFiles/execName.dir/ship.cpp.o  -o execName 
