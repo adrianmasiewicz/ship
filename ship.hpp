@@ -13,6 +13,7 @@ class Ship {
 
 public:
     Ship();
+    Ship(string id);
     Ship(string id, string name, int speed, int maxCrew, int capacity);
     Ship(string id, int speed, int maxCrew);
 
