@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 class Ship {
     string id_;
     string name_;
@@ -12,10 +11,9 @@ class Ship {
     int capacity_;
 
 public:
-    Ship ();
-    Ship(string id, string name, int speed, int maxCrew, int capacity);
-
-    Ship(string id, int speed, int maxCrew);
+    Ship();
+    Ship(const string id, const string name, int speed, int maxCrew, int capacity);
+    Ship(const string id, int speed, int maxCrew);
 
     void setName(string);
 
@@ -24,4 +22,6 @@ public:
     int getSpeed() const;
     int getMaxCrew() const;
     int getCapacity() const;
+
+
 };

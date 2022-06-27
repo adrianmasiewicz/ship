@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Program
+# Target rules for targets named Program.out
 
 # Build rule for target.
-Program: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Program
-.PHONY : Program
+Program.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Program.out
+.PHONY : Program.out
 
 # fast build rule for target.
-Program/fast:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/build
-.PHONY : Program/fast
+Program.out/fast:
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/build
+.PHONY : Program.out/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 ship.o: ship.cpp.o
@@ -156,7 +156,7 @@ ship.o: ship.cpp.o
 
 # target to build an object file
 ship.cpp.o:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/ship.cpp.o
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/ship.cpp.o
 .PHONY : ship.cpp.o
 
 ship.i: ship.cpp.i
@@ -165,7 +165,7 @@ ship.i: ship.cpp.i
 
 # target to preprocess a source file
 ship.cpp.i:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/ship.cpp.i
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/ship.cpp.i
 .PHONY : ship.cpp.i
 
 ship.s: ship.cpp.s
@@ -174,7 +174,7 @@ ship.s: ship.cpp.s
 
 # target to generate assembly for a file
 ship.cpp.s:
-	$(MAKE) -f CMakeFiles/Program.dir/build.make CMakeFiles/Program.dir/ship.cpp.s
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/ship.cpp.s
 .PHONY : ship.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Program"
+	@echo "... Program.out"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
