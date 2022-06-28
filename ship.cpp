@@ -8,11 +8,11 @@ Ship::Ship(string id, string name, int speed, int maxCrew, int capacity)
       maxCrew_(maxCrew),
       capacity_(capacity) {}
 
-Ship::Ship()
+Ship::Ship() 
     : Ship("no_ID", "no name", -1, -1, -1) {}
 
-Ship::Ship(string id) : id_(id){
-
+Ship::Ship(string id)
+    : id_(id) {
     cout << "Give me Name: ";
     cin >> name_;
     cout << "Give me max speed: ";
@@ -46,9 +46,17 @@ int Ship::getCapacity() const {
     return capacity_;
 }
 
-void Ship::showShip(){
+void Ship::showShip() {
     cout << name_ << " ID: " << id_ << "\n";
     cout << name_ << " Speed: " << speed_ << "km/h\n";
     cout << name_ << " max crew: " << maxCrew_ << " People\n";
     cout << name_ << " capacity: " << capacity_ << " kg\n";
+}
+
+void Ship::showShipShort() {
+    cout << name_ << " : id  "
+         << id_ << " | "
+         << speed_ << "km/h | "
+         << maxCrew_ << " People | "
+         << capacity_ << " kg";
 }

@@ -11,7 +11,7 @@ class Ship {
     int maxCrew_;
     int capacity_;
 
-public:
+public: 
     Ship();
     Ship(string id);
     Ship(string id, string name, int speed, int maxCrew, int capacity);
@@ -26,4 +26,5 @@ public:
     int getCapacity() const;
 
     void showShip();
+    void showShipShort();
 };
