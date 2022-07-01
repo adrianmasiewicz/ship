@@ -10,6 +10,7 @@ class Ship {
     int speed_;
     int maxCrew_;
     int capacity_;
+    size_t crew_ = 0;
 
 public: 
     Ship();
@@ -19,12 +20,19 @@ public:
 
     void setName(string);
 
+    Ship& operator++();
+    Ship operator++(int);
+    Ship& operator--();
+    Ship operator--(int);
+
     string getId() const;
     string getName() const;
     int getSpeed() const;
     int getMaxCrew() const;
     int getCapacity() const;
+    int getCrew() const;
 
     void showShip();
     void showShipShort();
+    void showPeople();
 };

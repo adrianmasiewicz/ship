@@ -8,7 +8,7 @@ Ship::Ship(string id, string name, int speed, int maxCrew, int capacity)
       maxCrew_(maxCrew),
       capacity_(capacity) {}
 
-Ship::Ship() 
+Ship::Ship()
     : Ship("no_ID", "no name", -1, -1, -1) {}
 
 Ship::Ship(string id)
@@ -46,17 +46,50 @@ int Ship::getCapacity() const {
     return capacity_;
 }
 
+int Ship::getCrew() const {
+    return crew_;
+}
+
 void Ship::showShip() {
     cout << name_ << " ID: " << id_ << "\n";
     cout << name_ << " Speed: " << speed_ << "km/h\n";
     cout << name_ << " max crew: " << maxCrew_ << " People\n";
     cout << name_ << " capacity: " << capacity_ << " kg\n";
+    cout << "The curren number of the crew: "<<crew_<<"\n";
 }
 
 void Ship::showShipShort() {
     cout << name_ << " : id  "
          << id_ << " | "
          << speed_ << "km/h | "
-         << maxCrew_ << " People | "
-         << capacity_ << " kg";
+         << " max people "<< maxCrew_<<" | "
+         << capacity_ << " kg | "
+         << crew_ <<" currently people";
+}
+
+void Ship::showPeople() {
+    cout << name_ << " currently have a "<<crew_ <<" people.";
+}
+
+Ship& Ship::operator++() {
+    crew_++;
+    return *this;
+}
+
+Ship Ship::operator++(int) {
+    Ship temporary = *this;
+    ++*this;
+    return temporary;
+}
+
+Ship& Ship::operator--(){
+    crew_--;
+    return *this;
+}
+
+Ship Ship::operator--(int)
+{
+   Ship temp = *this;
+   --*this;
+   return temp;
 }
