@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/adrian/Pulpit/p030522/OOP/ship/cargo.cpp
+cargo.hpp
+/home/adrian/Pulpit/p030522/OOP/ship/cargo.hpp
+iostream
+-
+
+/home/adrian/Pulpit/p030522/OOP/ship/cargo.hpp
+string
+-
+
 /home/adrian/Pulpit/p030522/OOP/ship/main.cpp
 iostream
 -
@@ -13,6 +23,14 @@ vector
 -
 ship.hpp
 /home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
+cargo.hpp
+/home/adrian/Pulpit/p030522/OOP/ship/cargo.hpp
+
+/home/adrian/Pulpit/p030522/OOP/ship/ship.cpp
+ship.hpp
+/home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
+iostream
+-
 
 /home/adrian/Pulpit/p030522/OOP/ship/ship.hpp
 string

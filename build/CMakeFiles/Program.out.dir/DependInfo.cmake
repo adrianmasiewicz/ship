@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/adrian/Pulpit/p030522/OOP/ship/cargo.cpp" "/home/adrian/Pulpit/p030522/OOP/ship/build/CMakeFiles/Program.out.dir/cargo.cpp.o"
   "/home/adrian/Pulpit/p030522/OOP/ship/main.cpp" "/home/adrian/Pulpit/p030522/OOP/ship/build/CMakeFiles/Program.out.dir/main.cpp.o"
   "/home/adrian/Pulpit/p030522/OOP/ship/ship.cpp" "/home/adrian/Pulpit/p030522/OOP/ship/build/CMakeFiles/Program.out.dir/ship.cpp.o"
   )

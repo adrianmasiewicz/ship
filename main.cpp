@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "ship.hpp"
+#include "cargo.hpp"
 
 using namespace std;
 
@@ -18,8 +19,11 @@ int main() {
     int choice;
     vector<Ship> vecShip;
 
+    Cargo C1("pen",20,100);
+
     startGame();
     mainChoice();
+    sampleShip(&vecShip);
     while (cin >> choice) {
         // system("clear");
         if (choice == 1) {
@@ -96,11 +100,24 @@ void unknowShip(vector<Ship>* vecShip) {
 
 vector<Ship> removeShip(vector<Ship> vecShip) {
     if (!vecShip.empty()) {
-        vecShip.erase(vecShip.end() - 1, vecShip.end());
+        int number;
+        
+        for (int i =0; i< vecShip.size(); i++){
+            cout << i+1<<" : "<<vecShip[i].getName();
+            cout <<" - "<<vecShip[i].getId()<<endl;
+        }
+
+        cout <<"\nWhich Ship you want remove?\n";
+        cin >> number;
+
+        cout << "remove ship: "<<vecShip[number-1].getName()<<endl;
+
+        vecShip.erase(vecShip.begin() + number -1, vecShip.begin() + number);
+
     } else
         cout << "Ship is empty\n";
 
-    cout << "remove alle ships!\n";
+    
     return vecShip;
 }
 
@@ -133,7 +150,6 @@ vector<Ship> addPerson(vector<Ship> vecShip) {
         }
         cout << "Added " << howManyPeople << " people.\n";
     }
-
     return vecShip;
 }
 
@@ -170,12 +186,12 @@ vector<Ship> deletePerson(vector<Ship> vecShip) {
     return vecShip;
 }
 
-void sampleShip(vector<Ship>* vecShip){
+void sampleShip(vector<Ship>* vecShip) {
     vector<Ship>* ptr = vecShip;
-    
-    Ship s1("B0000","Jolo",25,100,10);
+
+    Ship s1("B0000", "Jolo", 25, 100, 10);
     Ship s2("B0001", "Kolo", 21, 100, 10);
-    Ship s3("B0002", "Fis", 22, 100, 3);
+    Ship s3("B0002", "Fisa", 22, 100, 3);
     Ship s4("B0003", "cola", 21, 200, 15);
 
     ptr->push_back(s1);

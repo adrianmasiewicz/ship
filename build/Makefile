@@ -123,6 +123,33 @@ Program.out/fast:
 	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/build
 .PHONY : Program.out/fast
 
+cargo.o: cargo.cpp.o
+
+.PHONY : cargo.o
+
+# target to build an object file
+cargo.cpp.o:
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/cargo.cpp.o
+.PHONY : cargo.cpp.o
+
+cargo.i: cargo.cpp.i
+
+.PHONY : cargo.i
+
+# target to preprocess a source file
+cargo.cpp.i:
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/cargo.cpp.i
+.PHONY : cargo.cpp.i
+
+cargo.s: cargo.cpp.s
+
+.PHONY : cargo.s
+
+# target to generate assembly for a file
+cargo.cpp.s:
+	$(MAKE) -f CMakeFiles/Program.out.dir/build.make CMakeFiles/Program.out.dir/cargo.cpp.s
+.PHONY : cargo.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Program.out"
+	@echo "... cargo.o"
+	@echo "... cargo.i"
+	@echo "... cargo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

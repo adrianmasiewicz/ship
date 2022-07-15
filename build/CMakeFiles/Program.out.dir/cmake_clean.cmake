@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Program.out.dir/cargo.cpp.o"
   "CMakeFiles/Program.out.dir/main.cpp.o"
   "CMakeFiles/Program.out.dir/ship.cpp.o"
   "Program.out"
