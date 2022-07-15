@@ -9,6 +9,7 @@ void mainChoice();
 void showAllShip(vector<Ship> vecShip);
 void newShip(vector<Ship>* vecShip);
 void unknowShip(vector<Ship>* vecShip);
+void sampleShip(vector<Ship>* vecShip);
 vector<Ship> removeShip(vector<Ship> vecShip);
 vector<Ship> addPerson(vector<Ship> vecShip);
 vector<Ship> deletePerson(vector<Ship> vecShip);
@@ -167,4 +168,18 @@ vector<Ship> deletePerson(vector<Ship> vecShip) {
     }
 
     return vecShip;
+}
+
+void sampleShip(vector<Ship>* vecShip){
+    vector<Ship>* ptr = vecShip;
+    
+    Ship s1("B0000","Jolo",25,100,10);
+    Ship s2("B0001", "Kolo", 21, 100, 10);
+    Ship s3("B0002", "Fis", 22, 100, 3);
+    Ship s4("B0003", "cola", 21, 200, 15);
+
+    ptr->push_back(s1);
+    ptr->push_back(s2);
+    ptr->push_back(s3);
+    ptr->push_back(s4);
 }
