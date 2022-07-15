@@ -9,10 +9,9 @@ void mainChoice();
 void showAllShip(vector<Ship> vecShip);
 void newShip(vector<Ship>* vecShip);
 void unknowShip(vector<Ship>* vecShip);
-void deletePerson(vector<Ship>* vecSip);
 vector<Ship> removeShip(vector<Ship> vecShip);
 vector<Ship> addPerson(vector<Ship> vecShip);
-
+vector<Ship> deletePerson(vector<Ship> vecShip);
 
 int main() {
     int choice;
@@ -28,15 +27,15 @@ int main() {
         if (choice == 2) {
             vecShip = addPerson(vecShip);
         }
-
+        if (choice == 3) {
+            vecShip = deletePerson(vecShip);
+        }
         if (choice == 4) {
             unknowShip(&vecShip);
         }
-
         if (choice == 5) {
             showAllShip(vecShip);
         }
-
         if (choice == 6) {
             vecShip = removeShip(vecShip);
         }
@@ -97,7 +96,8 @@ void unknowShip(vector<Ship>* vecShip) {
 vector<Ship> removeShip(vector<Ship> vecShip) {
     if (!vecShip.empty()) {
         vecShip.erase(vecShip.end() - 1, vecShip.end());
-    }
+    } else
+        cout << "Ship is empty\n";
 
     cout << "remove alle ships!\n";
     return vecShip;
@@ -110,12 +110,12 @@ vector<Ship> addPerson(vector<Ship> vecShip) {
     for (int i = 0; i < vecShip.size(); i++) {
         cout << i + 1 << " : ";
         vecShip[i].showPeople();
-        cout << " (Max "<<vecShip[i].getMaxCrew()<<")\n";
+        cout << " (Max " << vecShip[i].getMaxCrew() << ")\n";
     }
 
     cout << "Enter the Ship numer: ";
     cin >> numerShip;
-    if (numerShip > vecShip.size()){
+    if (numerShip > vecShip.size()) {
         cout << "There is no such ship!\n";
         return vecShip;
     }
@@ -130,7 +130,40 @@ vector<Ship> addPerson(vector<Ship> vecShip) {
         for (int i = 0; i < howManyPeople; i++) {
             vecShip[numerShip]++;
         }
-        cout << "Added "<<howManyPeople<<" people.\n";
+        cout << "Added " << howManyPeople << " people.\n";
+    }
+
+    return vecShip;
+}
+
+vector<Ship> deletePerson(vector<Ship> vecShip) {
+    int numerShip;
+    int howManyPeople;
+
+    for (int i = 0; i < vecShip.size(); i++) {
+        cout << i + 1 << " : ";
+        vecShip[i].showPeople();
+        cout << "\n";
+    }
+
+    cout << "Enter the Ship numer: ";
+    cin >> numerShip;
+    if (numerShip > vecShip.size()) {
+        cout << "There is no such ship!\n";
+        return vecShip;
+    }
+    numerShip--;
+
+    cout << "How many people you want to delete: ";
+    cin >> howManyPeople;
+
+    if (vecShip[numerShip].getCrew() < howManyPeople) {
+        cout << "There is not that much people";
+    } else {
+        for (int i = 0; i < howManyPeople; i++) {
+            vecShip[numerShip]--;
+        }
+        cout << "delete " << howManyPeople << " people.\n";
     }
 
     return vecShip;
